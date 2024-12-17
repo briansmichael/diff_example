@@ -2,6 +2,31 @@ package org.example;
 
 import org.apache.commons.lang3.builder.DiffResult;
 
+/**
+ * Example output...
+ *
+ * Same: num of diffs = 0
+ *
+ * Name and active only: num of diffs = 2
+ * Original: {"name":"Name","active":true}
+ *  New: {"name":"name","active":false}
+ *
+ * Value and active only: num of diffs = 2
+ * Original: {"value":"Brian","active":null}
+ *  New: {"value":"Ben","active":true}
+ *
+ * All: num of diffs = 3
+ * Original: {"name":"Name","value":"Brian","active":null}
+ *  New: {"name":"name","value":"Ben","active":false}
+ *
+ * Null: num of diffs = 1
+ * Original: {"value":"Brian"}
+ *  New: {"value":null}
+ *
+ * Null (inverse): num of diffs = 1
+ * Original: {"value":null}
+ *  New: {"value":"Brian"}
+ */
 public class Main {
     public static void main(String[] args) {
         final Item item1 = new Item();
