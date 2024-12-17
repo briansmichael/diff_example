@@ -13,6 +13,8 @@ public class Item implements Diffable<Item> {
 
     private String value;
 
+    private Boolean active;
+
     @Override
     public DiffResult<Item> diff(final Item other) {
         return new DiffBuilder.Builder<Item>()
@@ -23,6 +25,7 @@ public class Item implements Diffable<Item> {
                 .build()
                 .append("name", getName(), other.getName())
                 .append("value", getValue(), other.getValue())
+                .append("active", getActive(), other.getActive())
                 .build();
     }
 }
